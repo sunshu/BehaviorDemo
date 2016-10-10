@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/behavior_demo_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            android:background="#56abe4" >
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:src="@mipmap/search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView" />
+
+
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:src="@mipmap/buy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/behavior_demo_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/behavior_demo_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="72dp"
+        android:src="@android:drawable/ic_dialog_email"
+        app:layout_behavior="nus.me.behaviordemo.MyFabBehavior"
+        android:layout_gravity="bottom|right" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="#FFF"
+
+        android:gravity="center"
+        app:layout_behavior="nus.me.behaviordemo.MyFabBehavior">
+        <ImageView
+            android:padding="12dp"
+            android:gravity="center"
+            android:src="@mipmap/icon1"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="底栏"/>
+        <ImageView
+            android:padding="12dp"
+            android:gravity="center"
+            android:src="@mipmap/icon2"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="底栏"/>
+        <ImageView
+            android:padding="12dp"
+            android:gravity="center"
+            android:src="@mipmap/icon3"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="底栏"/>
+        <ImageView
+            android:padding="12dp"
+            android:gravity="center"
+            android:src="@mipmap/icon4"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:textColor="#ffffff"
+            android:text="底栏"/>
+
+
+
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>
