@@ -10,18 +10,16 @@ import android.view.View;
 import android.view.ViewPropertyAnimator;
 import android.view.animation.Interpolator;
 
-/**
- * Created by 赵晨璞 on 2016/7/4.
- */
 
-public class MyFabBehavior extends CoordinatorLayout.Behavior<View> {
+
+public class ZhihuBehavior extends CoordinatorLayout.Behavior<View> {
 
     private static final Interpolator INTERPOLATOR = new FastOutSlowInInterpolator();
 
     private float viewY;//控件距离coordinatorLayout底部距离
     private boolean isAnimate;//动画是否在进行
 
-    public MyFabBehavior(Context context, AttributeSet attrs) {
+    public ZhihuBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
 
     }
@@ -40,6 +38,7 @@ public class MyFabBehavior extends CoordinatorLayout.Behavior<View> {
     @Override
     public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, View child, View target, int dx, int dy, int[] consumed) {
         //大于0是向上滚动 小于0是向下滚动
+
 
         if (dy >=10&&!isAnimate&&child.getVisibility()==View.VISIBLE) {
             hide(child);
